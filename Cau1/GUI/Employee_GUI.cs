@@ -115,7 +115,15 @@ namespace Cau1
                 tbId.Text = row.Cells[0].Value.ToString();
                 tbName.Text = row.Cells[1].Value.ToString();
                 tbDate.Text = row.Cells[2].Value.ToString();
-                tbGender.Text = row.Cells[3].Value.ToString();
+                //tbGender.Text = row.Cells[3].Value.ToString();
+                if (row.Cells[3].Value.ToString() == "True")
+                {
+                    tbGender.Checked = true;
+                }
+                else
+                {
+                    tbGender.Checked = false;
+                }
                 tbPlace.Text = row.Cells[4].Value.ToString();
                 tbDepartment.Text = row.Cells[5].Value.ToString();
             }
